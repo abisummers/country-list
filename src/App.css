@@ -1,0 +1,36 @@
+header {
+  background-color: rgb(46, 108, 189);
+  height: 60px;
+  color: white;
+  position: relative;
+}
+
+.main {
+  display: flex;
+  margin: 0 0 0 10%;
+}
+
+.country-list {
+  width: 40%;
+}
+
+.country-list ul {
+  list-style-type: none;
+}
+.country-list li a {
+  text-decoration: none;
+  color: black;
+}
+
+.country-info {
+  width: 40%;
+}
+
+hr {
+  color: rgb(173, 171, 171);
+}
+
+.active {
+  background-color: rgb(233, 202, 202);
+  text-transform: uppercase;
+}
