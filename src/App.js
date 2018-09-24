@@ -8,13 +8,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <header>WIKI COUNTRIES</header>
+        <header>
+          <h1>WIKI COUNTRIES</h1>
+        </header>
 
         <div className="main">
           <div className="country-list">
             <ul>
               {countries.map(country => (
-                <li key={country.cca3}>
+                <li key={country.cca3} className="scroll-bar">
                   {country.flag}
                   <NavLink to={`/${country.cca3}`}>
                     {country.name.common}

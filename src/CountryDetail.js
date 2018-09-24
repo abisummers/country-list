@@ -10,45 +10,47 @@ class CountryDetail extends Component {
 
     return (
       <div>
-        <h1>{countryInfo.name.common} </h1>
-        <hr />
+        <h2>{countryInfo.name.common} </h2>
+
         <table>
-          <tr>
-            <td>capital:</td>
-            <td>{countryInfo.capital}</td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>capital:</td>
+              <td>{countryInfo.capital}</td>
+            </tr>
+
+            <tr>
+              <td>Area:</td>
+              <td>
+                {countryInfo.area}
+                km 2
+              </td>
+            </tr>
+
+            <tr>
+              <td>Borders:</td>
+
+              <td>
+                {countryInfo.borders.length > 0 ? (
+                  <ul>
+                    {countryInfo.borders.map(border => (
+                      <li key={border}>
+                        <Link to={border}>
+                          {
+                            countries.find(country => country.cca3 === border)
+                              .name.common
+                          }
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  "no borders"
+                )}
+              </td>
+            </tr>
+          </tbody>
         </table>
-
-        <tr>
-          <td>Area:</td>
-          <td>
-            {countryInfo.area}
-            Km2
-          </td>
-        </tr>
-
-        <tr>
-          <td>Borders:</td>
-
-          <td>
-            {countryInfo.borders.length > 0 ? (
-              <div>
-                <ul>
-                  {countryInfo.borders.map(border => (
-                    <li key={border}>
-                      <Link to={border}>
-                        {
-                          countries.find(country => country.cca3 === border)
-                            .name.common
-                        }
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
-          </td>
-        </tr>
         {/* <details>
           <pre>{JSON.stringify(countryInfo, null, 2)}</pre>
         </details> */}

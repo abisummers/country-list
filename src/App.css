@@ -1,8 +1,19 @@
+body {
+  font-family: "Noto Serif KR", sans-serif;
+}
+
 header {
-  background-color: rgb(46, 108, 189);
-  height: 60px;
-  color: white;
+  background-color: rgb(38, 173, 226);
+  height: 55px;
   position: relative;
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin: 0;
+  font-family: Noto Serif KR;
 }
 
 .main {
@@ -10,8 +21,11 @@ header {
   margin: 0 0 0 10%;
 }
 
+/* ------------------COUNTRY LIST ---------------- */
 .country-list {
   width: 40%;
+  max-height: 90vh;
+  overflow: scroll;
 }
 
 .country-list ul {
@@ -22,15 +36,45 @@ header {
   color: black;
 }
 
+/* --------------- COUNTRY DETAILS ---------------- */
+
 .country-info {
   width: 40%;
 }
 
-hr {
-  color: rgb(173, 171, 171);
+.country-info {
+  margin: 0;
+  padding: 0;
 }
 
+.country-info li a {
+  text-decoration: none;
+  color: rgb(58, 176, 223);
+}
+
+table td,
+table th {
+  padding: 0.75rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+  width: 180px;
+}
+
+/* ---------------- NAVLINKS ---------------- */
+
 .active {
-  background-color: rgb(233, 202, 202);
-  text-transform: uppercase;
+  background-color: rgb(58, 176, 223);
+  box-shadow: 0 0 0 350px rgb(58, 176, 223);
+  color: white;
+}
+
+.scroll-bar {
+  border: rgb(173, 171, 171) 1px solid;
+  width: 70%;
+  height: 70px;
+  overflow: hidden;
+}
+
+.scroll-bar > a.active {
+  color: white;
 }
